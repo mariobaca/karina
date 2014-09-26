@@ -1,0 +1,70 @@
+<!--estilo organizador-->
+<style>
+.cerrarvineta{
+float:right;
+}
+
+.cerrarvineta:hover{
+	cursor:pointer;
+}
+
+.boton:hover{
+	cursor:pointer;
+}
+</style>
+<!--estilo organizador-->
+
+<!--codigo organizador-->
+<script>
+$(document).ready(function() {
+	var vinetas = $("#textovineta1,#textovineta2,#textovineta3");
+	$(".boton").click(function () {
+		$(this).css('opacity',0.5);
+		$(".boton").hide('fade',100);
+		vinetas.hide('fade',100);
+		var target = $(this).attr("name");
+		$("#" + target).delay(100).show('slide',{direction:'up'},'slow');
+	});
+	
+	$(".cerrarvineta").click(function () {
+		vinetas.hide('fade',200);
+		$(".boton").show('fade',200);
+	});
+});
+</script>
+<!--codigo organizador-->
+
+<div class="contenido">
+	
+	<center>
+	<img name="textovineta1" src="imagenes/icono.png" class="icon2 boton">
+	<img name="textovineta2" src="imagenes/icono.png" class="icon2 boton">
+	<img name="textovineta3" src="imagenes/icono.png" class="icon2 boton">	
+	</center>
+    
+    <div class="grid10">
+    
+    <div id="textovineta1" style="padding:1em; text-align:justify; display:none; background-color:#FBB03B; ">
+    <img class="cerrarvineta" src="imagenes/cerrar.png"><br>
+	<p>textovineta1. On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.</p></div>
+
+	<div id="textovineta2" style="padding:1em; text-align:justify; display:none; background-color:#29ABE2;">
+    <img class="cerrarvineta" src="imagenes/cerrar.png"><br><br>
+	<div class="grid5">textovineta2. On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.</div><!--
+    --><div class="grid5"><center><img src="imagenes/icono.png"class="img5"></div>
+	</div>
+
+	<div id="textovineta3" style="padding:1em; text-align:justify; display:none; background-color:#ED1C24;">
+    <img class="cerrarvineta" src="imagenes/cerrar.png"><br><br>
+    <center>
+    <div class="video-container">
+    <iframe src="http://www.youtube.com/embed/ENF9ylDRwXc?rel=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="fuente">Video Lorem Ipsum. Fuente: Lorem Impsum Videoteca</div>
+    </center></div>
+	</div>
+
+</div>
+
+<br>
+<br>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<link href="estilo.css" type="text/css" rel="stylesheet">
+<link href="animate.css" type="text/css" rel="stylesheet">
+<script src="scripts/jquery1.11.0.js"></script>
+<script src="scripts/jquery-ui.js"></script>
+
+<title>Nombre de Curso</title>
+
+
+<script>
+$( document ).ready(function() {
+	$("#ayuda").hide();
+	$("#ayuda").show('fade',500);
+	$("#creditos").hide();
+	$("#preloader").hide();
+	
+	
+	$( "#nombrecurso" ).click(function() {
+		event.preventDefault();
+		$("#menu").show('slide',{direction: 'left'},500);
+		$("#overlay").show('fade',500);
+		$('html, body').css('overflow','hidden');
+		$('html, body').css('height', '100%');
+	});
+	
+	$( ".cerrarmenu" ).click(function() {
+		event.preventDefault();
+		$("#menu").hide('slide',{direction: 'left'},500);
+		$("#overlay").hide('fade',500);
+		$('html, body').css('overflow','auto');
+		$('html, body').css('height', 'auto');
+	});
+		
+	$( "#overlay" ).click(function() {
+		event.preventDefault();
+		$("#menu").hide('slide',{direction: 'left'},500);
+		$("#overlay").hide('fade',500);
+		$('html, body').css('overflow','auto');
+		$('html, body').css('height', 'auto');
+	});
+	
+	$( ".mostrarayuda" ).click(function() {
+		event.preventDefault();
+		$("#ayuda").show('slide',{direction: 'left'},500);
+	});
+	
+	$( "#cerrarayuda" ).click(function() {
+		event.preventDefault();
+		$("#ayuda").hide('slide',{direction: 'left'},500);
+	});
+	
+	$('#cargacontenido').load('diagramacion.html');
+
+
+	$('.botonesmenu').click(function(){
+		event.preventDefault();
+		$("#menu").hide('slide',{direction: 'left'},500);
+		$("#overlay").hide('fade',500);
+		$('html, body').css('overflow','auto');
+		$('html, body').css('height', 'auto');
+		$("#preloader").show();
+		$('#cargacontenido').hide();
+		window.scrollTo(0,0);
+		$('#cargacontenido').load($(this).attr('href'),function(){
+			$('#preloader').hide();
+			$('#cargacontenido').show();
+		});
+		return false;
+	});
+	
+	
+	$( "#botoncreditos" ).click(function() {
+		event.preventDefault();
+		$("#creditos").show('slide',{direction: 'right'},500);
+	});
+	
+	$( "#cerrarcreditos" ).click(function() {
+		event.preventDefault();
+		$("#creditos").hide('slide',{direction: 'right'},500);
+	});
+});
+</script>
+
+</head>
+
+<body>
+
+    <div id="header">
+        <div id="nombrecurso">
+            <a>
+            <div id="nombretexto">NOMBRE DEL CURSO</div>
+            <img id="menuicono" src="imagenes/menu.png">
+            </a>
+        </div><!--
+        --><div id="botoncreditos"><a><img src="imagenes/logo.png"></a></div>
+    </div>
+    
+    <div id="menu" style="display:none;">
+        <center>
+            <div style="background-color:#BBB;"><b>NOMBRE DEL CURSO</b>
+            <i style="font-size:0.8em">Objetos Informacionales</i>
+            </div>
+            <br>
+            <div class="botones"><a href="diagramacion.html" class="botonesmenu">Diagramación</a></div>
+            <div class="botones"><a href="paginacion.html" class="botonesmenu">Paginación</a></div>
+            <div class="botones"><a href="organizador1.html" class="botonesmenu">Organizador 1</a></div>
+            <div class="botones"><a href="organizador2.html" class="botonesmenu">Organizador 2</a></div>
+            <div class="botones"><a href="videoyaudio.html" class="botonesmenu">Video y Audio<br>(HTML5 tags)</a></div>
+            <div class="botones"><a href="edge.html" class="botonesmenu">Edge Animate</a></div>
+            <br>
+            <br>
+            <div class="botones"><a href="anexos/imprimible.pdf" target="_blank" class="cerrarmenu">Version Imprimible</a></div>
+            <div class="botones"><a href="glosario.html" class="botonesmenu">Glosario</a></div>
+            <div class="mostrarayuda cerrarmenu botones"><a>Ayuda</a></div>
+       </center>  		
+    </div>
+    
+    <div id="overlay"></div>
+    
+    <div id="ayuda">
+        <br>
+        <div id="textoayuda">
+        <a><div id="cerrarayuda"><img src="imagenes/cerrar.png" width="25px"></div></a>
+        </div>
+        <br>
+    </div>
+    
+    <div id="creditos">
+        <br>
+        <div id="textocreditos">
+        <a><div id="cerrarcreditos"><img src="imagenes/cerrar.png" width="25px"></div></a>
+        </div>
+        <br>
+    </div>
+    
+    <div style="margin-top:4.5em;"></div>
+    
+    <center><img id="preloader" src="imagenes/preloader.gif"></center>
+    
+    <div id="cargacontenido">
+    </div>
+
+</body>
+</html>

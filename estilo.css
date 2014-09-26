@@ -1,0 +1,412 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+	margin:0px auto;
+	font-family: 'Open Sans', sans-serif;
+}
+
+a:link{
+	text-decoration:none;
+	color:inherit;
+}
+
+a:hover{
+	cursor:pointer;
+}
+
+/*HEADER*/
+#header{
+	width:100%;
+	height:auto;
+	background-color:#CCC;
+	display:table;
+	position:fixed;
+	top:0;
+}
+
+#header div{
+	display:table-cell;
+	vertical-align:middle;
+}
+
+#header #nombrecurso{
+	padding-left:1em;
+	text-align:left;
+	font-size:1.1em;
+}
+
+#header #botoncreditos{
+	padding:0.4em 0.4em 0 0;
+	text-align:right;
+	width:40px;
+}
+
+#menuicono{
+	display:none;
+}
+/*HEADER*/
+
+
+/*MENU LATERAL*/
+#menu{
+	max-width:230px;
+	background-color:#CCC;
+	position:fixed !important;
+	position:absolute;
+	z-index:800;
+	top:0;
+	bottom:0;
+	overflow:auto;
+}
+
+#menu div{
+	padding:1em;
+}
+
+#menu div:hover{
+	background-color:#DDD;
+	color:#000000;
+}
+
+.botones{
+	color:#000000;	
+}
+/*MENU LATERAL*/
+
+
+/*OVERLAY MENU LATERAL*/
+#overlay{
+width:100%;
+height:100vh;
+background-color: rgba(0,0,0,0.5);
+z-index:500;
+position:fixed !important;
+position:absolute;
+top:0;
+right:0; 
+bottom:0;
+display:none;
+}
+/*OVERLAY MENU LATERAL*/
+
+
+/*AYUDA*/
+#ayuda{
+width:100%;
+height:100vh;
+background-color: rgba(0,0,0,0.8);
+z-index:1000;
+position:fixed !important;
+position:absolute;
+top:0;
+right:0; 
+bottom:0;
+overflow:auto;
+}
+
+#textoayuda{
+margin:0px auto;
+max-width:950px;
+height:500px;
+background-color:#FFFFFF;	
+}
+
+#cerrarayuda{
+float:right;
+margin:0.5em 0.5em 0 0;	
+}
+/*AYUDA*/
+
+
+/*CREDITOS*/
+#creditos{
+width:100%;
+height:100vh;
+background-color: rgba(0,0,0,0.8);
+z-index:1000;
+position:fixed !important;
+position:absolute;
+top:0;
+right:0; 
+bottom:0;
+overflow:auto;
+}
+
+#textocreditos{
+margin:0px auto;
+max-width:950px;
+height:500px;
+background-color:#FFFFFF;	
+}
+
+#cerrarcreditos{
+	float:right;
+	margin:0.5em 0.5em 0 0;	
+}
+/*CREDITOS*/
+
+
+/*REJILLA BASE*/
+.grid1, .grid2, .grid3, .grid4, .grid5, .grid6, .grid7, .grid8, .grid9, .grid10{
+	display:inline-block;
+	vertical-align:middle;
+	height:auto;
+}
+
+.icon1, .icon2, .icon3, .icon4, .icon5, .icon6, .icon7, .icon8, .icon9, .icon10{
+	display:inline-block;
+	vertical-align:middle;
+	height:auto;
+}
+
+.grid1{width:10%;}
+.grid2{width:20%;}
+.grid3{width:30%;}
+.grid4{width:40%;}
+.grid5{width:50%;}
+.grid6{width:60%;}
+.grid7{width:70%;}
+.grid8{width:80%;}
+.grid9{width:90%;}
+.grid10{width:100%;}
+
+.img1{width:95px;}
+.img2{width:190px;}
+.img3{width:285px;}
+.img4{width:380px;}
+.img5{width:475px;}
+.img6{width:570px;}
+.img7{width:665px;}
+.img8{width:760px;}
+.img9{width:855px;}
+.img10{width:950px;}
+
+.icon1{width:10%;}
+.icon2{width:20%;}
+.icon3{width:30%;}
+.icon4{width:40%;}
+.icon5{width:50%;}
+.icon6{width:60%;}
+.icon7{width:70%;}
+.icon8{width:80%;}
+.icon9{width:90%;}
+.icon10{width:100%;}
+/*REJILLA BASE*/
+
+
+/*CONTENIDO CONTENIDO CONTENIDO*/
+.contenido{
+	background-color:#F0F0F0;
+	width:950px;
+	margin:0px auto;
+}
+
+.titulo{
+	font-weight:bold;
+	font-size:2em;
+	padding:0.5em 0 0.5em 0.5em;
+}
+
+.subtitulo{
+	text-align:justify;
+	font-weight:bold;
+	font-size:1em;
+	padding:1em 0 0 1em;
+}
+
+img{
+	max-width:100%;	
+	max-height:100%;
+}
+
+.source{
+	font-size: 0.9em;
+	font-style:italic;
+	padding:1em;
+}
+
+.instruccion{
+	text-align:center;
+	font-size: 1em;
+	font-style:italic;
+	background:#CCC;
+	box-shadow: 0px 0px 25px rgba(0,0,0,0.5);
+	text-decoration:none;
+	color:#000;
+	padding:0.8em 0.4em 0.8em 0.4em;
+}
+
+.resaltado{
+	background: #FC6;
+	padding:0 6px 2px 6px;
+}
+
+/*video*/
+.video-container {
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+}
+.video-container iframe,  
+.video-container object,  
+.video-container embed {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+video{
+	width:100%;
+	max-width:100%;
+	height:auto;	
+}
+/*video*/
+
+/*flechas de navegacion*/
+#contenedornavegacion{
+  width:100%;
+  height:45px;
+  bottom:0px;
+  position:fixed;
+  background-image:url(imagenes/fondopanel.png);
+}
+
+#navegacion{
+  width:155px;
+}
+
+#navegacion div{
+	display:inline-block;
+	vertical-align:middle;
+}
+
+.paginacion{
+	text-align:center;
+	padding:0.8em 0 0.8em 0;
+	color:#FFF;
+}
+/*flechas de navegacion*/
+/*CONTENIDO CONTENIDO CONTENIDO*/
+
+
+/*MEDIAQUERIES > 950px*/
+@media all and (max-width: 950px) {
+#textocreditos, #textoayuda{
+width:85%;
+}
+
+.contenido{
+	width:90%;
+}
+
+img{
+	max-width:100%;	
+	max-height:100%;
+}
+
+video{
+	width:100%;
+	max-width:100%;
+	height:auto;	
+}
+}
+/*MEDIAQUERIES > 950px*/
+
+
+/*MEDIAQUERIES > 750px*/
+@media all and (max-width: 750px) {
+#header #nombrecurso #nombretexto{
+	display:none;
+}
+
+#menuicono{
+	display:block;
+}
+	
+.grid1, .grid2, .grid3, .grid4, .grid5, .grid6, .grid7, .grid8, .grid9, .grid10{
+	width:100%;
+}
+
+img{
+	max-width:100%;	
+	max-height:100%;
+}
+
+.contenedorinstruccion{
+	padding:1em;
+}
+
+.titulo{
+	text-align:center;
+	padding:0.5em 0 0.5em 0;
+}
+
+video{
+	width:100%;
+	max-width:100%;
+	height:auto;	
+}
+}
+/*MEDIAQUERIES > 750px*/
+
+
+/*MEDIAQUERIES > 350px*/
+@media all and (max-width: 350px) {
+.icon1, .icon2, .icon3, .icon4, .icon5, .icon6, .icon7, .icon8, .icon9, .icon10{
+	width:100%;
+}
+
+img{
+	max-width:100%;	
+	max-height:100%;
+}
+
+video{
+	width:100%;
+	max-width:100%;
+	height:auto;	
+}
+}
+/*MEDIAQUERIES > 350px*/
+
+
+/*IMAGEN DE FONDO*/
+@media screen and (min-width: 1px) and (max-width: 800px) { 
+body {
+	background-size: 800px;
+	} }
+
+@media screen and (min-width: 800px) and (max-width: 1024px) { 
+body {
+	background-size: 1024px;
+} }
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) { 
+body {
+	background-size: 1280px;
+} }
+
+@media screen and (min-width: 1280px) and (max-width: 1344px) { 
+body {
+	background-size: 1344px;
+} }
+
+@media screen and (min-width: 1344px) and (max-width: 1600px) { 
+body {
+	background-size: 1600px;
+} }
+
+@media screen and (min-width: 1600px) and (max-width: 1920px) { 
+body {
+	background-size: 1920px;
+} }
+
+@media screen and (min-width: 1920px) and (max-width: 2560px) { 
+body {
+	background-size: 2560px;
+} }
+/*IMAGEN DE FONDO*/
